@@ -21,7 +21,7 @@ jobs:
         with:
           registry_url: ghcr.io
           registry_username: thomasvitale
-          registry_token: ${GITHUB_TOKEN}
+          registry_token: ${{ secrets.GITHUB_TOKEN }}
           function_path: .
           function_name: spring-boot-func
           function_version: 3.9.4
