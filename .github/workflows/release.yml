@@ -33,15 +33,15 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: thomasvitale
+          username: qwpto
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish container image
         uses: docker/build-push-action@v2
         with:
           push: true
           tags: |
-            ghcr.io/thomasvitale/kn-func-build:${{ steps.prep.outputs.VERSION }}
-            ghcr.io/thomasvitale/kn-func-build:latest
+            ghcr.io/qwpto/kn-func-build:${{ steps.prep.outputs.VERSION }}
+            ghcr.io/qwpto/kn-func-build:latest
           labels: |
             org.opencontainers.image.title=${{ github.event.repository.name }}
             org.opencontainers.image.source=${{ github.event.repository.html_url }}

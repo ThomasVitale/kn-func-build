@@ -1,7 +1,7 @@
 TAG?=v1
 
 build:
-	docker build -t ghcr.io/thomasvitale/kn-func-build:$(TAG) . -f Dockerfile
+	docker build -t ghcr.io/qwpto/kn-func-build:$(TAG) . -f Dockerfile
 
 push:
-	docker push ghcr.io/thomasvitale/kn-func-build:$(TAG)
+	docker push ghcr.io/qwpto/kn-func-build:$(TAG)
