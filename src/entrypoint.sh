@@ -17,4 +17,4 @@ echo ">>> Building function"
 FUNCTION_PATH=${4}
 FUNCTION_NAME=${5}
 FUNCTION_VERSION=${6}
-func build --path ${FUNCTION_PATH} --image ${REGISTRY_URL}/${REGISTRY_USERNAME}/${FUNCTION_NAME}:${FUNCTION_VERSION} --push
+func build --path ${FUNCTION_PATH} --image ${REGISTRY_URL}/${REGISTRY_USERNAME}/${FUNCTION_NAME}:${FUNCTION_VERSION} --push --verbose
