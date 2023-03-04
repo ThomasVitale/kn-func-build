@@ -1,6 +1,6 @@
 FROM golang:1.18
 
-RUN apt-get -y update && apt-get -y install podman
+RUN apt-get -y update && apt-get -y install podman && apt-get -y install docker
 
 COPY LICENSE README.md /
 COPY src /usr/src/
