@@ -8,7 +8,8 @@ echo ">>> Authenticating with container registry"
 REGISTRY_URL=${1}
 REGISTRY_USERNAME=${2}
 REGISTRY_TOKEN=${3}
-podman login ${REGISTRY_URL} -u ${REGISTRY_USERNAME} -p ${REGISTRY_TOKEN}
+#podman login ${REGISTRY_URL} -u ${REGISTRY_USERNAME} -p ${REGISTRY_TOKEN}
+docker login ${REGISTRY_URL} -u ${REGISTRY_USERNAME} -p ${REGISTRY_TOKEN}
 
 echo ""
 
