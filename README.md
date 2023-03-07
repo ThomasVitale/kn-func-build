@@ -19,10 +19,10 @@ jobs:
       - name: Run Knative tools
         uses: qwpto/kn-func-build@v1
         with:
-          registry_url: ghcr.io
-          registry_username: qwpto
-          registry_token: ${{ secrets.GITHUB_TOKEN }}
+          registry_url: gcr.io/project-id
+          registry_username: _json_key
+          registry_token: ${{ secrets.REGISTRY_PASSWORD }}
           function_path: .
-          function_name: spring-boot-func
+          function_name: examplefunc
           function_version: 3.9.4
 ```
