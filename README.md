@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Knative tools
-        uses: qwpto/kn-func-build@v1
+        uses: qwpto/kn-func-build@v14
         with:
           registry_url: gcr.io/project-id
           registry_username: _json_key
