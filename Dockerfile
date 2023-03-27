@@ -1,9 +1,9 @@
 FROM golang:1.18
 
-RUN apt-get -y update && apt-get -y install podman
+RUN apt-get -y update && apt-get -y install podman && apt-get -y install docker
 
 COPY LICENSE README.md /
-COPY src src
-RUN chmod +x src/install.sh src/entrypoint.sh && src/install.sh
+COPY src /usr/src/
+RUN chmod +x /usr/src/install.sh /usr/src/entrypoint.sh && /usr/src/install.sh
 
-ENTRYPOINT ["src/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/entrypoint.sh"]

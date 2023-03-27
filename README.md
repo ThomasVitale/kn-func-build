@@ -17,12 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Knative tools
-        uses: thomasvitale/kn-func-build@v1
+        uses: qwpto/kn-func-build@v14
         with:
-          registry_url: ghcr.io
-          registry_username: thomasvitale
-          registry_token: ${{ secrets.GITHUB_TOKEN }}
+          registry_url: gcr.io/project-id
+          registry_username: _json_key
+          registry_token: ${{ secrets.REGISTRY_PASSWORD }}
           function_path: .
-          function_name: spring-boot-func
+          function_name: examplefunc
           function_version: 3.9.4
 ```
