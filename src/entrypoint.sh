@@ -16,4 +16,4 @@ echo ">>> Building function"
 FUNCTION_PATH=${4}
 FUNCTION_NAME=${5}
 FUNCTION_VERSION=${6}
-echo ${REGISTRY_USERNAME}$'\n'${REGISTRY_TOKEN}$'\n' |func build --builder=pack --builder-image=gcr.io/paketo-buildpacks/builder:full --path ${FUNCTION_PATH} --image ${REGISTRY_URL}/${FUNCTION_NAME}:${FUNCTION_VERSION} --push --verbose
+echo ${REGISTRY_USERNAME}$'\n'${REGISTRY_TOKEN}$'\n' |func build --builder=pack --builder-image=gcr.io/paketo-buildpacks/builder:full-cf --path ${FUNCTION_PATH} --image ${REGISTRY_URL}/${FUNCTION_NAME}:${FUNCTION_VERSION} --push --verbose
